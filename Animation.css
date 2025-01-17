@@ -1,0 +1,130 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #c05107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  flex-direction: column;
+  text-align: center;
+  background-image: url(./Animal-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  color: #07e9de;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #eb4a0bf1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+/* Fade Animation */
+.fade {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Slide Animation */
+.slide {
+  animation: slideIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-200px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Rotate Animation */
+.rotate {
+  animation: rotateAnimation 2s ease-in-out forwards;
+}
+
+@keyframes rotateAnimation {
+  0% {
+      transform: rotate(0deg);
+      opacity: 0;
+  }
+  100% {
+      transform: rotate(360deg);
+      opacity: 1;
+  }
+}
+
+/* Scale Animation */
+.scale {
+  animation: scaleUp 2s ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Bounce Animation */
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-30px);
+  }
+}
+
+/* Hover Effects */
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
